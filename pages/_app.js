@@ -1,6 +1,6 @@
 function GlobalStyle() {
     return (
-        <style global jsx>{`
+        <style global JSX>{`
         *{
                  margin:0
                padding:0
@@ -8,9 +8,9 @@ function GlobalStyle() {
                list-style:none;
 }      
 body{
-    font-family:'Opens Sans', sains-serif;
+    font-family:'Opens Sans', sans-serif;
 }     
-/*App fit Height */ html,body,#_next{
+/*App fit Height */ html,body, #_next{
     min-height:100vh;
     display:flex;
     flex:1;
@@ -25,7 +25,7 @@ body{
         `}
 
         </style>
-    )
+    );
 }
 export default function MyApp({Component, pageProps}){
     console.log('Roda em todas as páginas')
