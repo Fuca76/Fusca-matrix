@@ -2,8 +2,8 @@ function GlobalStyle() {
     return (
         <style global JSX>{`
         *{
-                 margin:0
-               padding:0
+                 margin:0;
+               padding:0;
                box-sizing;border-box;
                list-style:none;
 }      
@@ -16,7 +16,7 @@ body{
     flex:1;
 }
 #_next{
-    flex:1
+    flex:1;
 }
 #_next >*{
     flex:1;

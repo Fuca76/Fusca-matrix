@@ -43,8 +43,9 @@ export default function PaginaInicial() {
             < Box
                 styleSheet={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    width:'100%',height:'100vh',
                     backgroundColor: appConfig.themes.color.primary[500],
-                    backgroundImage: 'url(https://i0.wp.com/i.imgur.com/Kog1K.gif)',
+                    backgroundImage: 'url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)',
                     backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
                 }}
             >
