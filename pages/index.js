@@ -5,13 +5,13 @@ import appConfig from "../config.json"
 
 
 function Title(props) {
-    console.log(props);
+   // console.log(props);
     const Tag = props.tag || 'h1';
     return (
         <><Tag>{props.children}</Tag>
-            < style JSX > {` 
+            < style jsx> {` 
       ${Tag}{ 
-        color: ${appConfig.themes.color.primary[200]}; 
+        color: ${appConfig.themes.color.neutros[200]}; 
         font-size:24px;
         font-weight:600;
       } 
