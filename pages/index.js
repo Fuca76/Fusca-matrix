@@ -55,9 +55,9 @@ export default function ChatPage() {
                     { /* Formulário */}
                     < Box
                         as="form"
-                        onSubmit={function (infosDoEvento) {
-                            infosDoEvento.preventdefault();
-                            console.log('alguém submeteu o form');
+                        onSubmit={function(infosDoEvento) {
+                            infosDoEvento.preventDefault();
+                           console.log('alguém submeteu o form');
                             roteamento.push('/chat');
                         
                         }}

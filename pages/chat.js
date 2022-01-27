@@ -6,7 +6,7 @@ export default function ChatPage() {
   return (
       <div>Página do Chat</div>
   )
-    const [mensagem, setMensagem] = React.useState('');
+    const [mensagem, setMensagem] = React.useState('olá');
     const [listaDeMensagens, setListaDeMensagens] = React.useState([]);
 
     /*
@@ -39,7 +39,7 @@ export default function ChatPage() {
             styleSheet={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 backgroundColor: appConfig.theme.colors.primary[500],
-                backgroundImage: `url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)`,
+                backgroundImage: `url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcZP2wmHOOhN3cjNfshzRqCGw7MHwN-UOPRw&usqp=CAU)`,
                 backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
                 color: appConfig.theme.colors.neutrals['000']
             }}
