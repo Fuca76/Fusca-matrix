@@ -1,9 +1,3 @@
-export default function ChatPage () {
-    return (
-        <div>Página do Chat</div>
-    )
-}
-
 import { Box, Text, TextField, Image, Button } from '@skynexui/components';
 import React from 'react';
 import appConfig from '../config.json';
@@ -16,10 +10,10 @@ export default function ChatPage() {
         <Box
             styleSheet={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                backgroundColor: appConfig.theme.colors.primary[500],
-                backgroundImage: `url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)`,
+                backgroundColor: appConfig.themes.colors.primary[500],
+                backgroundImage: `url()`,
                 backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
-                color: appConfig.theme.colors.neutrals['000']
+                color: appConfig.themes.color.neutros['000']
             }}
         >
             <Box
@@ -29,7 +23,7 @@ export default function ChatPage() {
                     flex: 1,
                     boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
                     borderRadius: '5px',
-                    backgroundColor: appConfig.theme.colors.neutrals[700],
+                    backgroundColor: appConfig.themes.color.neutros[700],
                     height: '100%',
                     maxWidth: '95%',
                     maxHeight: '95vh',
@@ -43,7 +37,7 @@ export default function ChatPage() {
                         display: 'flex',
                         flex: 1,
                         height: '80%',
-                        backgroundColor: appConfig.theme.colors.neutrals[600],
+                        backgroundColor: appConfig.themes.color.neutros[600],
                         flexDirection: 'column',
                         borderRadius: '5px',
                         padding: '16px',
@@ -68,9 +62,9 @@ export default function ChatPage() {
                                 resize: 'none',
                                 borderRadius: '5px',
                                 padding: '6px 8px',
-                                backgroundColor: appConfig.theme.colors.neutrals[800],
+                                backgroundColor: appConfig.theme.color.neutros[800],
                                 marginRight: '12px',
-                                color: appConfig.theme.colors.neutrals[200],
+                                color: appConfig.themes.colors.neutrals[200],
                             }}
                         />
                     </Box>
@@ -108,7 +102,7 @@ function MessageList(props) {
                 display: 'flex',
                 flexDirection: 'column-reverse',
                 flex: 1,
-                color: appConfig.theme.colors.neutrals["000"],
+                color: appConfig.themes.color.neutros["000"],
                 marginBottom: '16px',
             }}
         >
@@ -121,7 +115,7 @@ function MessageList(props) {
                     padding: '6px',
                     marginBottom: '12px',
                     hover: {
-                        backgroundColor: appConfig.theme.colors.neutrals[700],
+                        backgroundColor: appConfig.themes.color.neutros[700],
                     }
                 }}
             >
@@ -147,7 +141,7 @@ function MessageList(props) {
                         styleSheet={{
                             fontSize: '10px',
                             marginLeft: '8px',
-                            color: appConfig.theme.colors.neutrals[300],
+                            color: appConfig.themes.color.neutro[300],
                         }}
                         tag="span"
                     >

@@ -5,47 +5,35 @@ import appConfig from "../config.json"
 
 
 function Title(props) {
-   // console.log(props);
     const Tag = props.tag || 'h1';
     return (
-        <><Tag>{props.children}</Tag>
-            < style jsx> {` 
-      ${Tag}{ 
-        color: ${appConfig.themes.color.neutros[200]}; 
-        font-size:24px;
-        font-weight:600;
-      } 
-    ` } </style >
+        <>
+            <Tag>{props.children}</Tag>
+            <style JSX>{`
+              ${Tag} {
+                  color: ${appConfig.themes.color.neutros['000']};
+                  font-size: 24px;
+                  font-weight: 600;
+              }
+              `}</style>
         </>
     );
 }
-//Componente React
-// function HomePage() {
-// // JSX
-// Retorna (
-// <div>
-// <GlobalStyle />
-// <Titulo tag="h2">Boas vindas de volta!</Titulo>
-// <h2>Discord - Matriz Alura</h2>
-// </div>
-// )
-// }
-// exporta a página inicial padrão
 
-export default function PaginaInicial() {
-   // const username = 'Fuca76';
- const [username, setUsername]= React.useState('Fuca76');
- const roteamento = useRouter();
+export default function ChatPage() {
+    // const username = 'Fuca76';
+    const [username, setUsername] = React.useState('Fuca76');
+    const roteamento = useRouter();
 
 
     return (
-            <>
+        <>
             < Box
                 styleSheet={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    width:'100%',height:'100vh',
-                    backgroundColor: appConfig.themes.color.primary[500],
-                    backgroundImage: 'url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)',
+                    width: '100%', height: '100vh',
+                   // backgroundColor: appConfig.themes.color.primary[000],
+                    backgroundImage: 'url(https://cdn.pixabay.com/photo/2018/05/10/16/31/oldtimer-3387934_960_720.jpg)',
                     backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
                 }}
             >
@@ -67,11 +55,11 @@ export default function PaginaInicial() {
                     { /* Formulário */}
                     < Box
                         as="form"
-                        onSubmit={function(infosDoEvento){
+                        onSubmit={function (infosDoEvento) {
                             infosDoEvento.preventdefault();
                             console.log('alguém submeteu o form');
                             roteamento.push('/chat');
-                          //  window.location.href='/chat';
+                        
                         }}
                         styleSheet={{
                             display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
@@ -83,17 +71,17 @@ export default function PaginaInicial() {
                             {appConfig.nome}
                         </Text>
                         <input type="text"
-                        value={username}
-                        onChange={function (event) {
-                            console.log('usuario digitou',event.target.value);
-                            //Onde ta o valor?
-                            const valor=event.target.value;
-                            //Trocar o valor da variavel
-                            setUsername(valor);
-                        }}
+                            value={username}
+                            onChange={function (event) {
+                                console.log('usuario digitou', event.target.value);
+                                //Onde ta o valor?
+                                const valor = event.target.value;
+                                //Trocar o valor da variavel
+                                setUsername(valor);
+                            }}
                         />
 
-                       {/*< TextField
+                        {/*< TextField
                             fullWidth
                             textFieldColors={{
                                 neutro: {
@@ -103,7 +91,7 @@ export default function PaginaInicial() {
                                     backgroundColor: appConfig.themes.color.primary[800],
                                 },
                             }}
-                        />*/} 
+                        />*/}
                         < Button
                             type='enviar'
                             label='Entrar'
@@ -158,5 +146,5 @@ export default function PaginaInicial() {
                 </Box>
             </Box >
         </>
-        );
-        }
+    );
+}
