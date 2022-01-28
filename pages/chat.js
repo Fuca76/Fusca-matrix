@@ -88,7 +88,7 @@ Lista de mensagens: {listaDeMensagens.map((mensagemAtual)=>{
                         onKeyPress= {(event) => {
                             if(event.key === 'Enter'){ 
                             event.preventDefault(); 
-                            handleNovaMensagem();
+                            handleNovaMensagem(mensagem);
                             }
                            }}
                             placeholder="Insira sua mensagem aqui..."
